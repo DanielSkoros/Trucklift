@@ -26,7 +26,7 @@ ul {
   list-style: none;
 }
 .hide {
-  visibility: hidden;
+  transform: translateX(-110%);
 }
 .cta {
   border: 3px solid #0D8AFF;
@@ -65,6 +65,7 @@ main {
   top: -30px;
   padding-top: 50px;
   color: white;
+  transition: transform 0.5s;
 }
 
 .index {
@@ -75,8 +76,10 @@ main {
 .services {
   display: flex;
   flex-direction: column;
+  align-items: center;
     h1 {
       color: black;
+      margin-bottom: 50px; ;
     }
 }
 
@@ -92,6 +95,7 @@ main {
 
 .card {
   box-shadow: 0px 3px 15px rgba(0,0,0,0.9);
+  margin-bottom: 50px;
   position: relative;
   border-radius: 15px;
   background:white;
@@ -147,6 +151,64 @@ main {
   }
 }
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 90%; /* Could be more or less, depending on screen size */
+    .modal__header{
+      display: flex;
+      width: 100%;
+    }
+  .service__modal {
+    background: url("../assets/services.jpg") center no-repeat;
+    height: 300px;
+    background-size: cover;
+  }
+
+  .modal__body, .modal__footer{
+    padding: 20px;
+  }
+
+  .modal__footer {
+    background: #0D8AFF;
+    color: white;
+    font-size: 1.1em;
+  }
+}
+
+/* The Close Button */
+.close {
+  font-size: 2.5em;
+  padding: 10px 20px;
+  margin-left: auto;
+  font-weight: bold;
+  color: white;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
 @media screen and (min-width: 1024px){
   body {
@@ -172,4 +234,22 @@ main {
     margin-top: 0;
   }
 
+  .modal {
+    top: -170px;
+    height: calc(100% + 170px);
+  }
+
+  .modal-content {
+    .service__modal {
+      height: 600px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1345px){
+  .modal {
+    top: -245px;
+    height: calc(100% + 250px);
+  }
 }

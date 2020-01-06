@@ -2,7 +2,7 @@ const trigger = document.querySelector('.navTrigger');
 
 const menuContainer = document.querySelector('.nav__container');
 
-const mainContainer = document.querySelector('main');
+const mainContainer = document.querySelector('#main');
 
 const fixedLogo = document.querySelector('.mobile__fixed');
 

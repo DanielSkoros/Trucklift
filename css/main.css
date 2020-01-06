@@ -216,26 +216,44 @@ main {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (min-height: 700px) {
+  body {
+    padding-top: 200px;
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 900px) {
   body {
     padding-top: 200px;
     overflow: hidden;
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    padding-top: 200px;
   }
 
   main {
     z-index: 1;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 50px);
     display: flex;
     align-items: center;
   }
 
   .flex__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: auto;
     color: white;
     font-size: 1.1em;
+    top: -50px;
+  }
+
+  .heading__buttons {
+    display: flex;
   }
 
   .underlay {

@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav__container {
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #ED1D27;
+}
+
+ul {
+  list-style: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.cta {
+  border: 3px solid #0D8AFF;
+  width: 150px;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  margin: auto;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  color: white;
+  z-index: 10;
+}
+
+.cta:hover {
+  background: #0D8AFF;
+}
+
+.--filled {
+  background: #0D8AFF;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding-top: 200px;
+    overflow: hidden;
+  }
+}
+
+/*# sourceMappingURL=basic.css.map */

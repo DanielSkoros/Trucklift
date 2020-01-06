@@ -1,0 +1,244 @@
+header {
+  max-height: 30px;
+  margin: auto;
+  z-index: 100;
+  a {
+    color: black;
+  }
+}
+
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+}
+.navTrigger:hover i {
+  background: dodgerblue;
+}
+.navTrigger i {
+  transition: ease-in-out 0.3s;
+  background-color: black;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navTrigger i {
+  background-color: black;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  will-change: transform;
+}
+.navTrigger i:nth-child(1) {
+  animation: outT 0.8s backwards;
+  animation-direction: reverse;
+}
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  animation: outM 0.8s backwards;
+  animation-direction: reverse;
+}
+.navTrigger i:nth-child(3) {
+  animation: outBtm 0.8s backwards;
+  animation-direction: reverse;
+}
+.navTrigger.active i:nth-child(1) {
+  animation: inT 0.8s forwards;
+}
+.navTrigger.active i:nth-child(2) {
+  animation: inM 0.8s forwards;
+}
+.navTrigger.active i:nth-child(3) {
+  animation: inBtm 0.8s forwards;
+}
+
+@keyframes inM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes outM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes inT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+@keyframes outT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+@keyframes inBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+@keyframes outBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.nav__container {
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  z-index: 100;
+}
+
+.visible {
+  transform: translateX(0);
+  z-index: 100;
+}
+
+.nav__info {
+  width: 80%;
+  margin: auto;
+  z-index: 100;
+}
+
+.nav__logo {
+  background: url("../assets/logo.png");
+  width: 196px;
+  height: 40px;
+  margin: 50px auto;
+}
+
+.mobile__fixed {
+  position: fixed;
+  top: -35px;
+  left: 30px;
+  z-index: 2;
+}
+
+.nav__contact--block {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  margin: 35px auto;
+  i {
+    font-size: 38px;
+    margin-right: 15px;
+  }
+  .fa-phone {
+    transform: rotate(90deg);
+  }
+    .nav__data {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+ul {
+  list-style: none;
+  margin-top: 70px;
+    li {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+  .navTrigger {
+    display: none;
+  }
+  .nav__container {
+    transform: translateX(0);
+    max-height: 200px;
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+
+  .mobile__fixed {
+    display: none;
+  }
+
+  header {
+    max-height: 200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+  }
+
+  .nav__info {
+    width: 100%;
+    margin: auto;
+  }
+
+  .nav__contact {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav__lower {
+    width: 100%;
+    height: 60px;
+    background:#3C3C3E;
+    margin: auto;
+    ul {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+        li {
+          margin: 0;
+            a {
+              color: white;
+                &:hover {
+                  color: #ED1D27;
+                }
+            }
+        }
+    }
+  }
+}

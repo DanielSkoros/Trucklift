@@ -253,11 +253,13 @@ main {
   }
 
   .heading__buttons {
+    margin-top: 50px;
     display: flex;
   }
 
   .underlay {
     margin-top: 0;
+    min-height: 600px;
   }
 
   .modal {
